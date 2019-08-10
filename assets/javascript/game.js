@@ -2,7 +2,7 @@ $(document).ready(function(){
 // Variable declarations
 var wins= 0;
 var losses= 0;
-var userScore= 0;
+var userScore= [];
 
 
 // Button values Math.floor(Math.random() * ((y-x)+1) + x);
@@ -17,7 +17,7 @@ var button3= Math.floor(Math.random() * ((12 - 1)+1)+ 1);
 var button4= Math.floor(Math.random() * ((12 - 1)+1)+ 1);
 // click event
 $("#imageR").click(function(){
-    
+    $("#userScore").text(userScore.push(button1));
   });
   $("#imageW").click(function(){
     
