@@ -15,7 +15,8 @@ var button1= Math.floor(Math.random() * ((12 - 1)+1)+ 1);
 var button2= Math.floor(Math.random() * ((12 - 1)+1)+ 1);
 var button3= Math.floor(Math.random() * ((12 - 1)+1)+ 1);
 var button4= Math.floor(Math.random() * ((12 - 1)+1)+ 1);
-// click event
+
+// click events
 if (targetScore > userScore){
 $("#imageR").click(function(){
   userScore += button1;
@@ -34,14 +35,19 @@ $("#imageBL").click(function(){
   userScore += button4;
   $("#userScore").html(userScore);
 });
+
 // if win
 if(userScore === targetScore){
   wins++
-  $("#userScore").html(userScore);
+  $("#win").html(wins);
+  alert("You Win!")
 }
 
 // if lose
-
-// user score
+if(userScore > targetScore){
+  losses++
+  $("#lose").html(losses);
+  alert("You lose!");
+}
 };
 });
