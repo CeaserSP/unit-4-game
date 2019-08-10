@@ -6,15 +6,29 @@ body{
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
+#header{
+    background-color: wheat;
+    font-size:x-large;
+    text-align: center;
+}
 .col-md-6{
     background-color: coral;
 }
 .col-md-3{
     background-color: wheat;
-    font-size:xx-large;
+    font-size:x-large;
+}
+#wl{
+    background-color: wheat;
+    font-size:x-large;
 }
 .image{
         border-radius: 50%;
         width: 125px;
         height: 150px;
+}
+#user{
+    background-color: wheat;
+    font-size:x-large;
+    text-align: center;
 }
