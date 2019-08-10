@@ -23,15 +23,22 @@ $("#imageR").click(function(){
   });
 
   $("#imageW").click(function(){
-    
+    userScore += button2;
+  $("#userScore").html(userScore);
 });
 $("#imageB").click(function(){
-    
+  userScore += button3;
+  $("#userScore").html(userScore);
 });
 $("#imageBL").click(function(){
-    
+  userScore += button4;
+  $("#userScore").html(userScore);
 });
 // if win
+if(userScore === targetScore){
+  wins++
+  $("#userScore").html(userScore);
+}
 
 // if lose
 
