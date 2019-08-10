@@ -2,7 +2,7 @@ $(document).ready(function(){
 // Variable declarations
 var wins= 0;
 var losses= 0;
-var userScore= [];
+var userScore= 0;
 
 
 // Button values Math.floor(Math.random() * ((y-x)+1) + x);
@@ -16,9 +16,12 @@ var button2= Math.floor(Math.random() * ((12 - 1)+1)+ 1);
 var button3= Math.floor(Math.random() * ((12 - 1)+1)+ 1);
 var button4= Math.floor(Math.random() * ((12 - 1)+1)+ 1);
 // click event
+if (targetScore > userScore){
 $("#imageR").click(function(){
-    $("#userScore").text(userScore.push(button1));
+  userScore += button1;
+  $("#userScore").html(userScore);
   });
+
   $("#imageW").click(function(){
     
 });
@@ -33,4 +36,5 @@ $("#imageBL").click(function(){
 // if lose
 
 // user score
+};
 });
