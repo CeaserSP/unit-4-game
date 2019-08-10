@@ -6,18 +6,12 @@ body{
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
-.col-md-4{
-    background-color: lightgrey;
-    font-size: x-large;
-}
 .col-md-6{
     background-color: coral;
 }
 .col-md-3{
     background-color: wheat;
-}
-.col-md-2{
-    background-color: wheat;
+    font-size:xx-large;
 }
 .image{
         border-radius: 50%;
