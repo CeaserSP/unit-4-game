@@ -17,38 +17,49 @@ $(document).ready(function () {
   var button4 = Math.floor(Math.random() * ((12 - 1) + 1) + 1);
 
   // click events
-  // if (targetScore !== userScore) {
+  $("#imageR").click(function () {
+    userScore += button1;
+    $("#userScore").html(userScore);
+    check();
+  });
+  $("#imageW").click(function () {
+    userScore += button2;
+    $("#userScore").html(userScore);
+    check();
+  });
+  $("#imageB").click(function () {
+    userScore += button3;
+    $("#userScore").html(userScore);
+    check();
+  });
+  $("#imageBl").click(function () {
+    userScore += button4;
+    $("#userScore").html(userScore);
+    check();
+  });
+  // function to call these during click events
+  function check() {
+    // if win
+    if (userScore === targetScore) {
+      wins++
+      $("#win").html(wins);
+      alert("You Win!")
+      console.log(wins)
+      reset();
+    };
 
-    $("#imageR").click(function () {
-      userScore += button1;
-      $("#userScore").html(userScore);
-    });
-    $("#imageW").click(function () {
-      userScore += button2;
-      $("#userScore").html(userScore);
-    });
-    $("#imageB").click(function () {
-      userScore += button3;
-      $("#userScore").html(userScore);
-    });
-    $("#imageBl").click(function () {
-      userScore += button4;
-      $("#userScore").html(userScore);
-    });
-  // };
-  // if win
-  if (userScore === targetScore) {
-    wins++
-    $("#win").html(wins);
-    alert("You Win!")
-    console.log(wins)
+    // if lose
+    if (userScore > targetScore) {
+      losses++
+      $("#lose").html(losses);
+      alert("You lose!");
+      console.log(losses)
+  reset();
+    };
   };
-
-  // if lose
-  if (userScore > targetScore) {
-    losses++
-    $("#lose").html(losses);
-    alert("You lose!");
-    console.log(losses)
-  };
+  function reset(){
+    userScore=0;
+    targetScore= Math.floor(Math.random() * ((120 - 19) + 1) + 19);
+    $("#targetScore").text(targetScore);
+  }
 });
