@@ -12,4 +12,9 @@ var button1= math.floor(Math.random() * ((12 - 1)+1)+ 1);
 var button2= math.floor(Math.random() * ((12 - 1)+1)+ 1);
 var button3= math.floor(Math.random() * ((12 - 1)+1)+ 1);
 var button4= math.floor(Math.random() * ((12 - 1)+1)+ 1);
+// click event
+
+// if win
+
+// if lose
 });
