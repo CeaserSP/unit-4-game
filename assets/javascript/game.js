@@ -8,7 +8,8 @@ var userScore= 0;
 // Button values Math.floor(Math.random() * ((y-x)+1) + x);
 // target score
 var targetScore= Math.floor(Math.random() * ((120 - 19)+1)+ 19);
-document.getElementById("#targetScore").text(targetScore);
+// document.getElementById("#targetScore").text(targetScore);
+$("#targetScore").text(targetScore);
 // Crystal values
 var button1= Math.floor(Math.random() * ((12 - 1)+1)+ 1);
 var button2= Math.floor(Math.random() * ((12 - 1)+1)+ 1);
